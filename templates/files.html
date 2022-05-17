@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family:  Helvetica, sans-serif;
+        }
+
+        .content {
+            top: 28px;
+            left: 0;
+            right: 0px;
+            bottom: 0px;
+            margin: 0px;
+            padding-left: 20px;
+            position: absolute;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <ul>
+            {% for f in data.filenames %}
+            <li><a href="/file/{{data.path}}/{{f}}">{{f}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
